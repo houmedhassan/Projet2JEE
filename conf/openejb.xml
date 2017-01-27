@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<openejb>
+
+	<Resource id = "myDS" type="DataSource">
+	JdbcDriver com.mysql.jdbc.Driver
+	JdbcUrl jdbc:mysql://localhost:3306/Gestion_CV
+	UserName root
+	Password 
+	JtaManaged false
+	</Resource>
+
+
+</openejb>

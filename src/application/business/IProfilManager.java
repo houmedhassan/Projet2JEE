@@ -2,24 +2,11 @@ package application.business;
 
 import java.util.List;
 
+import application.beans.Activity;
 import application.beans.Person;
 
 public interface IProfilManager {
 	
-	/**
-	 * This method adds a new person.
-	 * it's a function which allows a new user signing up
-	 * @param p
-	 * @return person
-	 */
-	public Person addPerson(Person p);
-	
-	/**
-	 * this method allows show a profil of user's.
-	 * @param p
-	 * @return person
-	 */
-	public Person showPerson(Person p);
 	
 	/**
 	 * this method allows to make update a profil of a person
@@ -33,14 +20,7 @@ public interface IProfilManager {
 	 * @param p
 	 */
 	public void deleteProfil(Person p);
-	
-	/**
-	 * this method return the list of person whose the name passed to parameter
-	 * @param name
-	 * @return the list of person
-	 */
-	public List<Person> findPersonByName(String name);
-	
+		
 	/**
 	 * this method allows a user's to login in app.
 	 * @param mail
@@ -49,4 +29,24 @@ public interface IProfilManager {
 	 */
 	public Person loginPerson(String mail, String password);
 	
+	
+	/**
+	 * this method allows of save an activity
+	 * @return Activity
+	 * @param activity
+	 */
+	public Activity addActivity(Activity activity);
+	
+	/**
+	 * this method allows to make update an activity of a person
+	 * @return Activity
+	 * @param idActivity, activity
+	 */
+	public Activity updateActivity(int idActivity, Activity activity);
+	
+	/**
+	 * this method allows of remove an activity of a person
+	 * @param activity
+	 */
+	public void deleteActivity(Activity activity);
 }

@@ -35,6 +35,7 @@ public class Person implements Serializable{
 	private String passWord;
 	
 	@OneToMany(mappedBy="person")
+	@JoinTable(name = "ACTIVITY")
 	private List <Activity> activities;
 	
 	/**

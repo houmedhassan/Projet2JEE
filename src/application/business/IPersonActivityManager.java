@@ -8,24 +8,26 @@ import application.beans.Person;
 public interface IPersonActivityManager {
 	
 	/**
-	 * this method allows of save an activity
-	 * @return Activity
-	 * @param activity
+	 * This method adds a new person.
+	 * it's a function which allows a new user signing up
+	 * @param p
+	 *
 	 */
-	public Activity addActivity(Activity activity);
+	public void addPerson(Person p);
 	
 	/**
-	 * this method allows to make update an activity of a person
-	 * @return Activity
-	 * @param idActivity, activity
+	 * this method allows show a profil of user's.
+	 * @param p
+	 * @return person
 	 */
-	public Activity updateActivity(int idActivity, Activity activity);
+	public Person showPerson(Person p);
 	
 	/**
-	 * this method allows of remove an activity of a person
-	 * @param activity
+	 * this method return the list of person whose the name passed to parameter
+	 * @param name
+	 * @return the list of person
 	 */
-	public void deleteActivity(Activity activity);
+	public List<Person> findPersonByName(String name);
 	
 	/**
 	 * this method allows to show an activity ( like title, year of the actvity, nature of the activity,
